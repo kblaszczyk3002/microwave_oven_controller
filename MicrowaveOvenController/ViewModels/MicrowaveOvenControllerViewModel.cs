@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 using System.Windows.Threading;
 using MicrowaveOvenController.Commands;
@@ -83,7 +78,7 @@ namespace MicrowaveOvenController.ViewModels
         public MicrowaveOvenControllerViewModel() 
         {
             _microwaveOvenControlPanel = new MicrowaveOvenControlPanel();
-            _microwaveOvenControlPanel.Timer = "0";
+            _microwaveOvenControlPanel.Timer = new TimeSpan(0, 0, 0).ToString("mm\\:ss");
 
             StartCommand = new RelayCommand(s => Start());
             DoorOpenChangeCommand = new RelayCommand(s => DoorOpenChange());
@@ -133,7 +128,10 @@ namespace MicrowaveOvenController.ViewModels
         public void Decrement(object sender, EventArgs e)
         {
             increment--;
-            Timer = increment.ToString();
+            Timer = new TimeSpan(0, 0, increment).ToString("mm\\:ss");
+
+            if (increment == 0)
+                dispatcherTimer.Stop();
         }
 
         public void TurnOffHeater()
@@ -146,7 +144,7 @@ namespace MicrowaveOvenController.ViewModels
             if (dispatcherTimer.IsEnabled)
             {
                 increment = increment + 60;
-                Timer = increment.ToString();
+                Timer = new TimeSpan(0, 0, increment).ToString("mm\\:ss");
             }
             else if (increment > 0)
             {
@@ -156,7 +154,7 @@ namespace MicrowaveOvenController.ViewModels
             {
                 increment = 60;
                 dispatcherTimer.Start();
-                Timer = increment.ToString();
+                Timer = new TimeSpan(0, 0, increment).ToString("mm\\:ss");
             }
         }
 
