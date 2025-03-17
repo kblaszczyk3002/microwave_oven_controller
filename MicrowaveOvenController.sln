@@ -5,7 +5,7 @@ VisualStudioVersion = 17.12.35707.178 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicrowaveOvenController", "MicrowaveOvenController\MicrowaveOvenController.csproj", "{64723D4D-7C3C-4AF9-AF9E-9E85D49E68C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicrowaveOvenController.Tests", "MicrowaveOveController.Tests\MicrowaveOvenController.Tests.csproj", "{2B4C6E11-66BB-4B0F-B1E9-3EC7BB1CF9C1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicrowaveOvenController.Tests", "MicrowaveOvenController.Tests\MicrowaveOvenController.Tests.csproj", "{2B4C6E11-66BB-4B0F-B1E9-3EC7BB1CF9C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
