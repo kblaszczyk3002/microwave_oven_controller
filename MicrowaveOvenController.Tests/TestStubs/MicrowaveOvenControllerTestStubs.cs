@@ -33,7 +33,7 @@ namespace MicrowaveOvenController.Tests.TestStubs
         {
             return new MicrowaveOvenControlPanel
             {
-                Timer = "120"
+                Timer = "02:00"
             };
         }
 
@@ -41,7 +41,7 @@ namespace MicrowaveOvenController.Tests.TestStubs
         {
             return new MicrowaveOvenControlPanel
             {
-                Timer = "60"
+                Timer = "01:00"
             };
         }
     }
